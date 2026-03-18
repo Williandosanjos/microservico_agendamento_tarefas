@@ -10,15 +10,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDetailsServiceImpl {
 
+    // Repositório para acessar dados de usuário no banco de dados
     @Autowired
     private UsuarioClient client;
 
-    public UserDetails carregaDadosUsuario(String email, String token) {
-        UsuarioDTO usuarioDTO = client.buscaUsuarioProEmail(email, token);
+    public UserDetails loadUserByUsername(String email, String authorizationHeader) {
+
+        UsuarioDTO usuarioDTO = client.buscaUsuarioPormail(email, authorizationHeader);
 
         return User
-                .withUsername(usuarioDTO.getEmail())
-                .password(usuarioDTO.getSenha())
-                .build();
+                .withUsername(usuarioDTO.getEmail()) // Define o nome de usuário como o e-mail
+                .password(usuarioDTO.getSenha()) // Define a senha do usuário
+                .authorities("USER")
+                .build(); // Constrói o objeto UserDetails
+
     }
 }
