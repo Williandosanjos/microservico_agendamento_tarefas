@@ -50,4 +50,5 @@ public class SecurityConfig {
         // Retorna a configuração do filtro de segurança construída
         return http.build();
     }
+
 }
