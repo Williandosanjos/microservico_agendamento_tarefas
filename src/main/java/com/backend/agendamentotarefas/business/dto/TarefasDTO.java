@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class TarefasDTO {
+
     private String id;
     private String nomeTarefa;
     private String descricao;
@@ -21,4 +22,5 @@ public class TarefasDTO {
     private String emailUsuario;
     private LocalDateTime dataAlteracao;
     private StatusTarefas statusTarefas;
+
 }

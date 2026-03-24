@@ -64,5 +64,4 @@ public class TarefasController {
 
         return ResponseEntity.ok(tarefasService.updateTarefas(dto, id));
     }
-
 }
