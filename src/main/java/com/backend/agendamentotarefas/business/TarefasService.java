@@ -72,5 +72,4 @@ public class TarefasService {
             throw new ResourceNotFoundException("Erro ao alterar status da tarefa " + e.getCause());
         }
     }
-
 }
