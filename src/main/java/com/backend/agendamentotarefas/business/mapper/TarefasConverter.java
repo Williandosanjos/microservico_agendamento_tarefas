@@ -1,4 +1,4 @@
-package com.backend.agendamentotarefas.business.converter;
+package com.backend.agendamentotarefas.business.mapper;
 
 import com.backend.agendamentotarefas.business.dto.TarefasDTO;
 import com.backend.agendamentotarefas.infrastructure.entity.TarefasEntity;

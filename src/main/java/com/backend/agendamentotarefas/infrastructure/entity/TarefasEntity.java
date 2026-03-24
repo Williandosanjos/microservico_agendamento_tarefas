@@ -23,5 +23,5 @@ public class TarefasEntity {
     private LocalDateTime dataEvento;
     private String emailUsuario;
     private LocalDateTime dataAlteracao;
-    private StatusTarefas Status;
+    private StatusTarefas statusTarefas;
 }
